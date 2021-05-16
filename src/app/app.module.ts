@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FetchDataService } from './task/common/fetch-data.service';
 import { TaskListComponent } from './task/task-list/task-list.component';
 import { TaskComponent } from './task/task/task.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 // Committing to pushing-data-to-drupal branch
 @NgModule({
@@ -18,7 +19,8 @@ import { TaskComponent } from './task/task/task.component';
   declarations: [
     AppComponent,
     TaskListComponent,
-    TaskComponent
+    TaskComponent,
+    NavbarComponent
   ],
   providers: [
     FetchDataService,
