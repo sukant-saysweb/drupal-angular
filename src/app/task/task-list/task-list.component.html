@@ -1,11 +1,17 @@
 <div class="container">
-    <h1>Displaying content fetched from Drupal server</h1>
+    <h1 class="site-title">Displaying content fetched from Drupal server</h1>
     <hr />
 
-    <div>
-        <div *ngFor="let task of drupalTasks" class="well hoverwell thumbnail">
-            <h1>{{task.title}}</h1>
-            <p [innerHTML]="task.body"></p>
+    <div *ngFor="let task of drupalTasks" class="well hoverwell">
+        <div class="container task-container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h1 class="task-title">{{task.title}}</h1>
+                </div>
+                <div class="col-md-10">
+                    <p [innerHTML]="task.body" class="task-body"></p>
+                </div>
+            </div>
         </div>
     </div>
 

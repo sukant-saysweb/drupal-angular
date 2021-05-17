@@ -1,3 +1,18 @@
 h1{
-    color: white;
+    color:#FF6347;
+}
+
+.site-title{
+    color: #FFD700;
+}
+
+.task-title{
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+    clear: both;
+    display: table;
+}
+
+.task-body{
+    font-size: 1.2em;
 }
