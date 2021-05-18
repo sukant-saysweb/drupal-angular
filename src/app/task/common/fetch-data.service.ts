@@ -13,8 +13,12 @@ export class FetchDataService {
   tasks: Observable<ITask[]>
   drupalTasks: any
 
-
   constructor(private http: HttpClient) { }
+
+  getSessionToken() {
+    const tasksUrl = "http://localhost/ng-test/session/token?_format=hal_json"
+    return this.http.get(tasksUrl)
+  }
 
   getTasksDrupal(): Observable<ITask[]> {
     const tasksUrl = "http://localhost/ng-test/task"

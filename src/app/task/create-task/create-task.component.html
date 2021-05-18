@@ -1,1 +1,20 @@
-<p>create-task works!</p>
+<div class="container create-task-form">
+    <div class="col-md-4">
+        <form #createTaskForm="ngForm" (ngSubmit)="createTask(createTaskForm.value)" autocomplete="off" novalidate>
+            <div class="container form-group">
+                <label for="taskTitle" class="create-task-label">Task Title </label>
+                <input (ngModel)="taskTitle" name="taskTitle" id="taskTitle" type="text"
+                    placeholder="Title for you Task, goes here..." class="form-control" />
+            </div>
+            <div class="container form-group">
+                <label for="taskBody" class="create-task-label">Task Description: </label>
+                <textarea (ngModel)="taskBody" name="taskBody" id="taskBody" type="text"
+                    placeholder="Description for you Task, goes here..." class="form-control"></textarea>
+            </div>
+            <div class="container form-group">
+                <button type="submit" class="btn btn-success submit-task">Submit</button>
+                <button type="button" (click)="onCancel()" class="btn btn-default">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

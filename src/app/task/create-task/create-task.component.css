@@ -1,0 +1,15 @@
+.submit-task{
+    margin-right: 20px;
+}
+
+.create-task-label{
+    font-size: 1.5em;
+}
+
+.create-task-form input, .create-task-form textarea{
+    max-width: 60%;
+}
+
+.create-task-form textarea{
+    height: 150px;
+}

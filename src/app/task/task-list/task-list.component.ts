@@ -24,8 +24,6 @@ export class TaskListComponent implements OnInit {
         );
       });
     });
-
-    console.log(this.drupalTasks);
   }
 
   ngOnInit(): void {
