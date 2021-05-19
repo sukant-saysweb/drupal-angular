@@ -11,6 +11,17 @@
                 </li>
                 <li><a [routerLink]="['create-tasks']" routerLinkActive="active" class="menu-links">Create Task</a></li>
             </ul>
+            <div class="navbar-header navbar-right">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a *ngIf="!auth.isAuthenticated()" [routerLink]="['user/login']"
+                            routerLinkActive="active">Login</a>
+                        <!-- <a *ngIf="auth.isAuthenticated()" [routerLink]="['tasks']" routerLinkActive="active">Welcome
+                            {{ auth.currentUser.userName }}</a> -->
+                        <button *ngIf="auth.isAuthenticated()" (click)="logout()" class="btn btn-danger">Logout</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

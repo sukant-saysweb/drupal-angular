@@ -7,7 +7,11 @@ const routes: Routes = [
   { path: 'tasks', component: TaskListComponent },
   { path: 'create-tasks', component: CreateTaskComponent },
   // { path: 'tasks/:id', component: TaskDetailsComponent }
-  { path: '', redirectTo: '/tasks', pathMatch: 'full' }
+  { path: '', redirectTo: '/tasks', pathMatch: 'full' },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
+  }
 ];
 
 @NgModule({

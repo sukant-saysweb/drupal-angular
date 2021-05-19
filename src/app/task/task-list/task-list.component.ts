@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 
 import { FetchDataService } from '../common/fetch-data.service'
-import { HttpClient } from '@angular/common/http'
-import { DrupalTask } from '../common/task'
+import { DrupalTask } from '../common/drupalTask.model'
 
 
 
